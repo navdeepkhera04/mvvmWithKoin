@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.squareboat.view.fragments.authentication.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/loginSignupFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_recruiterhomeFragment"
+            app:destination="@id/recruiterhomeFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_candidateHomeFragment"
+            app:destination="@id/candidateHomeFragment" />
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/loginSignupFragment"
+        android:name="com.squareboat.view.fragments.authentication.LoginSignupFragment"
+        android:label="LoginSignupFragment"
+        tools:layout="@layout/fragment_login_signup">
+
+
+        <action
+            android:id="@+id/action_loginSignupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginSignupFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.squareboat.view.fragments.authentication.LoginFragment"
+        android:label="LoginSignupFragment"
+        tools:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_recruiterhomeFragment"
+            app:destination="@id/recruiterhomeFragment" />
+
+        <action
+            android:id="@+id/_signupFragment_to_candidateHomeFragment"
+            app:destination="@id/candidateHomeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.squareboat.view.fragments.authentication.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+
+        <action
+            android:id="@+id/action_signupFragment_to_recruiterhomeFragment"
+            app:destination="@id/recruiterhomeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.squareboat.view.fragments.authentication.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotFragment_to_changePaqsswordFragment"
+            app:destination="@id/ChangePasswordFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ChangePasswordFragment"
+        android:name="com.squareboat.view.fragments.authentication.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password">
+
+
+    </fragment>
+
+
+  <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.squareboat.view.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recruiterhomeFragment"
+        android:name="com.squareboat.view.fragments.Recruiter.RecruiterHomeFragment"
+        android:label="RecruiterHomeFragment"
+        tools:layout="@layout/fragment_recruiter_home">
+
+        <action
+            android:id="@+id/action_addrecruiterHome_to_addJobFragment"
+            app:destination="@id/addJobFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addJobFragment"
+        android:name="com.squareboat.view.fragments.Recruiter.AddJobFragment"
+        android:label="AddJobFragment"
+        tools:layout="@layout/fragment_add_job">
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/candidateHomeFragment"
+        android:name="com.squareboat.view.fragments.candidate.CandidateHomeFragment"
+        android:label="CandidateHomeFragment"
+        tools:layout="@layout/fragment_candidate_home">
+
+        <action
+            android:id="@+id/action_candidateHome_to_appliedJobFragment"
+            app:destination="@id/AppliedJobsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/AppliedJobsFragment"
+        android:name="com.squareboat.view.fragments.candidate.AppliedJobsFragment"
+        android:label="AppliedJobFragment"
+        tools:layout="@layout/fragment_applied_jobs">
+
+
+    </fragment>
+
+
+
+
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="0dp"
+    android:layout_height="@dimen/_250sdp"
+    android:src="@drawable/app"
+    android:id="@+id/appIV"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            android:text="App Under Construction"
+            app:layout_constraintBottom_toBottomOf="@id/appIV"
+            app:layout_constraintEnd_toEndOf="@id/appIV"
+            app:layout_constraintStart_toStartOf="@id/appIV"
+            app:layout_constraintTop_toBottomOf="@id/appIV"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

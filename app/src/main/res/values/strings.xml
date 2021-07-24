@@ -1,0 +1,49 @@
+<resources>
+
+
+    <!--    Base string-->
+    <string name="internet_connection">Internet Connection seems to be offline. Please check you Internet Connectivity.</string>
+    <string name="loading">Loading…</string>
+
+
+    <!--validation messages-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="select_skills">Type Skills with Comma(,) seprated</string>
+
+
+    <string name="login">Login</string>
+    <string name="by_signing_up_you_are_agree_to_our_terms_of_use_amp_privacy_policy"><![CDATA[By Signing up you are agree to our Terms of use & Privacy policy]]></string>
+    <string name="sign_up">Sign Up</string>
+    <string name="add_job">Add Job</string>
+
+    <string name="first_name">Name</string>
+    <string name="job_title">Title of the Job</string>
+    <string name="job_description">Job description</string>
+    <string name="job_locatiuon">Job Location</string>
+    <string name="field_required">Field required</string>
+
+
+    <string name="plz_enter_last_name">Please Enter Last Name</string>
+    <string name="plz_enter_email">Please Enter Email</string>
+    <string name="plz_enter_valid_email">"Please Enter valid Email "</string>
+    <string name="plz_enter_password">Please Enter password</string>
+
+    <string name="plz_enter">Please Enter</string>
+    <string name="plz_enter_valid_password">Password should be minimum of 8 digits including alphanumeric with at least 1 digit and 1 special character</string>
+    <string name="password_missmatch">Password and Confirm Password not match</string>
+
+    <string name="should_be_minimum_5_digits">Length Should Be of 5 to 15 Digits</string>
+    <string name="plz_enter_confirm_password">Please Enter confirm password</string>
+    <string name="send">Send</string>
+    <string name="press_one_more_time">Press one more time to push app into background</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_new_password">Set New Password</string>
+
+</resources>

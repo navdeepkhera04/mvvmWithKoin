@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6822</color>
+    <color name="colorAccent">#FF6822</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background_color">#f8fafc</color>
+    <color name="blackTransparent">#37000000</color>
+    <color name="blackDarkTransparent">#65000000</color>
+    <color name="transparent">#00FFFFFF</color>
+
+
+    <color name="textColor">#3D3D3D</color>
+    <color name="app_color">#FF6822</color>
+    <color name="logoImageColor">#EB6D37</color>
+
+    <!--blue grey-->
+</resources>

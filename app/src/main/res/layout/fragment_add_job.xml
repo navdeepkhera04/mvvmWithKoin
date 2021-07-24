@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.squareboat.viewmodel.AddJobViewModel" />
+
+        <variable
+            name="handleClick"
+            type="com.squareboat.util.HandleClick" />
+
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/jobsTV"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Add job by filling data"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jobsTV" />
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/titleET"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_edit_text"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/job_title"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:maxLines="4"
+                android:text="@={viewModel.newJobData.title}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                bind:getfieldRequiredError="@{@string/field_required}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_edit_text"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/job_description"
+                android:lines="4"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:maxLines="8"
+                android:text="@={viewModel.newJobData.description}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                bind:getfieldRequiredError="@{@string/field_required}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleET" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/locationET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_edit_text_bottom"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/job_locatiuon"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:text="@={viewModel.newJobData.location}"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                bind:getfieldRequiredError="@{@string/field_required}"
+                app:layout_constraintEnd_toEndOf="@id/descriptionET"
+                app:layout_constraintStart_toStartOf="@id/descriptionET"
+                app:layout_constraintTop_toBottomOf="@id/descriptionET" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/createJobBT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_selected_bt"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/add_job"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:onClick="@{(View)->handleClick.onClickHandle(View)}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/locationET"
+                app:layout_constraintStart_toStartOf="@id/locationET"
+                app:layout_constraintTop_toBottomOf="@id/locationET" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

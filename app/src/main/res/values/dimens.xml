@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    text sizes-->
+
+    <!--margins-->
+
+
+    <!--    toolbar elevation-->
+
+    <!--    horizontal padding-->
+
+    <!--    vertical padding-->
+
+    <!--    dimensions-->
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+
+    <!--    dimensions in sp-->
+
+
+</resources>

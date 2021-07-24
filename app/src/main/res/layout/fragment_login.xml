@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.squareboat.viewmodel.LoginViewModel" />
+
+        <variable
+            name="handleClick"
+            type="com.squareboat.util.HandleClick" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logoIV"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_square_boat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/bg_edit_text_top"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:singleLine="true"
+                android:text="@={viewModel.loginData.email}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                bind:getEmailError="@{@string/email}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoIV" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/passwordET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_edit_text_bottom"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/password"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:text="@={viewModel.loginData.password}"
+                android:textStyle="bold"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                app:layout_constraintEnd_toEndOf="@id/emailET"
+                app:layout_constraintStart_toStartOf="@id/emailET"
+                app:layout_constraintTop_toBottomOf="@id/emailET" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_selected_bt"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:onClick="@{(View)->handleClick.onClickHandle(View)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/emailET"
+                app:layout_constraintStart_toStartOf="@id/emailET"
+                app:layout_constraintTop_toBottomOf="@id/passwordET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Forgot Password?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:onClick="@{(View)->handleClick.onClickHandle(View)}"
+                android:id="@+id/forgotPasswordTV"
+                app:layout_constraintEnd_toEndOf="@id/emailET"
+                app:layout_constraintStart_toStartOf="@id/emailET"
+                app:layout_constraintTop_toBottomOf="@id/loginBT" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#EEEEEE"
+                android:id="@+id/viewV"
+                android:layout_marginTop="@dimen/_70sdp"
+                app:layout_constraintTop_toBottomOf="@+id/forgotPasswordTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Don’t have account? Sign Up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                android:id="@+id/dontHaveAccountTV"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewV"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
